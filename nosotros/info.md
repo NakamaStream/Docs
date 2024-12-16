@@ -24,8 +24,6 @@ NakamaGroup es un equipo pequeño compuesto por tres personas con varios años d
 
 ### Proyectos
 
-
-
 <table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td></td><td></td><td><strong>NakamaStream</strong></td><td><a href="../.gitbook/assets/NakamStream.png">NakamStream.png</a></td></tr><tr><td></td><td></td><td><strong>NyaaCli</strong></td><td><a href="../.gitbook/assets/ezgif-1-f5b96de6520f.jpg">ezgif-1-f5b96de6520f.jpg</a></td></tr><tr><td></td><td><strong>NakaUI</strong></td><td></td><td><a href="../.gitbook/assets/NakamStream.png">NakamStream.png</a></td></tr><tr><td></td><td>NakamaStream - Android</td><td></td><td><a href="../.gitbook/assets/NakamStream.png">NakamStream.png</a></td></tr><tr><td></td><td>NakamaStream - Desktop</td><td></td><td><a href="../.gitbook/assets/NakamStream.png">NakamStream.png</a></td></tr></tbody></table>
 
 
