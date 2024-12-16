@@ -1,5 +1,21 @@
 ---
 icon: hand-holding-circle-dollar
+cover: ../.gitbook/assets/Grupo Nakama.png
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: full
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # Donaciones
