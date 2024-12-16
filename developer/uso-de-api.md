@@ -145,3 +145,41 @@ if (cachedData) {
 
 ```
 
+## CaptchaService
+
+### Métodos
+
+#### `getNewCaptcha()`
+
+Obtiene un nuevo captcha de la API.
+
+* **Devuelve:** `Promise`: una promesa que se resuelve en los datos captcha.
+* **Test**:
+
+```javascript
+try {
+    // Se llama al método `getNewCaptcha` del objeto `captchaService`.
+    // Este método realiza una solicitud asíncrona (a nuestra Api) para obtener un nuevo captcha.
+    // La palabra clave `await` indica que el código esperará hasta que el captcha sea obtenido antes de continuar.
+    const captcha = await captchaService.getNewCaptcha();
+
+    // Si la solicitud para obtener el captcha es exitosa, se imprime en la consola el objeto `captcha`.
+    // El mensaje indica que el captcha fue obtenido correctamente.
+    console.log('Captcha obtained:', captcha);
+} catch (error) {
+    // Si ocurre un error durante la ejecución del código dentro del bloque `try`, el flujo de ejecución se mueve al bloque `catch`.
+    // Aquí se captura el error y se muestra un mensaje en la consola con la descripción del problema.
+    console.error('Error fetching captcha:', error.message);
+}
+
+```
+
+#### `handleApiError(error)`
+
+Maneja errores de solicitudes de API.
+
+* **Parámetros**:&#x20;
+* \- `error` `(Error)`: El objeto de error lanzado durante la solicitud. - **Lanza:** Lanza un error más descriptivo según la respuesta.
+* **Test:**
+
+Este método se llama internamente dentro de `getNewCaptcha()` y no es necesario llamarlo directamente.
