@@ -14,4 +14,5 @@
 
 ## Soporte
 
+* [General](soporte/general.md)
 * [web](soporte/web.md)
