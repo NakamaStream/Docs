@@ -44,15 +44,44 @@ module.exports = {
 * **Test**:
 
 ```javascript
-// Se llama a la función `fetchRecentAnimes` del objeto `animesRecent`.
-// Esta función probablemente realiza una solicitud (Con Nuestra Api) para obtener los animes recientes.
-// La palabra clave `await` indica que esta función es asíncrona y que el código esperará
-// a que se complete la operación antes de continuar.
-const recentAnimes = await animesRecent.fetchRecentAnimes();
+/**
+ * Importa la clase AnimesRecent de la librería nakamastream-lib para interactuar con la API
+ */
+const { AnimesRecent } = require('nakamastream-lib');
 
-// Una vez que los animes recientes han sido obtenidos y almacenados en la variable `recentAnimes`,
-// se imprimen en la consola del desarrollador para ver el contenido.
-console.log(recentAnimes);
+/**
+ * Función autoejecutable asíncrona que demuestra el uso de la clase AnimesRecent
+ * para obtener y mostrar información sobre animes recientes.
+ * 
+ * Esta función:
+ * 1. Crea una instancia de AnimesRecent
+ * 2. Obtiene la lista de animes recientes
+ * 3. Muestra el último anime cargado
+ * 4. Maneja posibles errores durante la ejecución
+ */
+(async () => {
+  // Crear una instancia de la clase AnimesRecent con configuración por defecto
+  const animesRecent = new AnimesRecent();
+
+  try {
+    // Obtiene la lista de animes recientes desde la API
+    const recentAnimes = await animesRecent.fetchRecentAnimes();
+
+    // Muestra la lista completa de animes recientes
+    console.log('Animes recientes:', recentAnimes);
+
+    // Obtiene y muestra información sobre el anime más recientemente cargado
+    const latestAnime = animesRecent.getMostRecentUploadedAnime();
+    if (latestAnime) {
+      console.log('Último anime cargado:', latestAnime);
+    } else {
+      console.log('No hay un nuevo anime cargado.');
+    }
+  } catch (error) {
+    // Captura y muestra cualquier error que ocurra durante la ejecución
+    console.error('Error al obtener animes recientes:', error.message);
+  }
+})();
 ```
 
 #### `getMostRecentUploadedAnime()`
@@ -62,14 +91,48 @@ console.log(recentAnimes);
 * **Test**:
 
 ```javascript
-// Se llama al método `getMostRecentUploadedAnime` del objeto `animesRecent`.
-// Este método probablemente devuelve el anime más reciente que fue subido.
-// Dado que no se usa `await`, asumimos que el método es sincrónico y no devuelve una promesa.
-const lastAnime = animesRecent.getMostRecentUploadedAnime();
+/**
+ * Script para obtener y mostrar el último anime agregado usando la librería nakamastream-lib
+ * 
+ * Este script crea una instancia de AnimesRecent, obtiene la lista de animes recientes
+ * y muestra el último anime agregado. Si hay errores durante el proceso, los maneja
+ * apropiadamente.
+ * 
+ * @requires nakamastream-lib
+ */
 
-// Imprime en la consola el contenido de `lastAnime`.
-// Esto permite ver los detalles del anime más reciente subido (por ejemplo, nombre, episodio, fecha de subida, etc.).
-console.log(lastAnime);
+const { AnimesRecent } = require('nakamastream-lib'); // Asegúrate de que el archivo se llame AnimesRecent.js
+
+/**
+ * Función autoejecutable asíncrona que maneja la lógica principal
+ * 
+ * Esta función realiza los siguientes pasos:
+ * 1. Crea una instancia de AnimesRecent
+ * 2. Obtiene la lista de animes recientes
+ * 3. Obtiene y muestra el último anime agregado
+ * 4. Maneja cualquier error que pueda ocurrir durante el proceso
+ */
+(async () => {
+  // Crear una instancia de la clase AnimesRecent
+  const animesRecent = new AnimesRecent();
+
+  try {
+    // Llamar a fetchRecentAnimes para actualizar la lista de animes recientes
+    await animesRecent.fetchRecentAnimes();
+
+    // Llamar a getMostRecentUploadedAnime para obtener el último anime cargado
+    const latestAnime = animesRecent.getMostRecentUploadedAnime();
+
+    if (latestAnime) {
+      console.log('Último anime cargado:', latestAnime);
+    } else {
+      console.log('No hay un nuevo anime cargado o no se ha actualizado la lista.');
+    }
+  } catch (error) {
+    // Manejar errores
+    console.error('Error al obtener el último anime cargado:', error.message);
+  }
+})();
 ```
 
 ## AnimesAll
