@@ -167,11 +167,8 @@ try {
 #### `searchAnimes(query)`
 
 * **Descripción**: Busca animes por título en los datos almacenados en caché.
-*
-
-    **Parámetros**:
-
-    * `query` (string): El término de búsqueda para filtrar animes por título.
+**Parámetros**:
+* `query` (string): El término de búsqueda para filtrar animes por título.
 * **Devuelve**: una serie de objetos de anime que coinciden con el término de búsqueda. Devuelve una matriz vacía si no hay caché disponible.
 * **Test:**
 
