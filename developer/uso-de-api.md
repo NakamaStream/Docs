@@ -34,7 +34,7 @@ module.exports = {
 
 ### AnimesRecent
 
-### Métodos
+#### Métodos
 
 #### `fetchRecentAnimes()`
 
@@ -137,7 +137,7 @@ const { AnimesRecent } = require('nakamastream-lib'); // Asegúrate de que el ar
 
 ### AnimesAll
 
-### Métodos
+#### Métodos
 
 #### `fetchAllAnimes()`
 
@@ -207,7 +207,7 @@ if (cachedData) {
 
 ### CaptchaService
 
-### Métodos
+#### Métodos
 
 #### `getNewCaptcha()`
 
