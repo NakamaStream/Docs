@@ -32,7 +32,7 @@ module.exports = {
 };
 ```
 
-## AnimesRecent
+### AnimesRecent
 
 ### Métodos
 
@@ -135,7 +135,7 @@ const { AnimesRecent } = require('nakamastream-lib'); // Asegúrate de que el ar
 })();
 ```
 
-## AnimesAll
+### AnimesAll
 
 ### Métodos
 
@@ -205,7 +205,7 @@ if (cachedData) {
 
 ```
 
-## CaptchaService
+### CaptchaService
 
 ### Métodos
 
